@@ -1,26 +1,26 @@
-```python
+# python
 import random
 
 def get_user_choice():
-    """
-    Function to get the user's choice of rock, paper, or scissors.
-    """
+    
+    # Function to get the user's choice of rock, paper, or scissors.
+    
     user_choice = input("Enter your choice (rock, paper, or scissors): ").lower()
     while user_choice not in ["rock", "paper", "scissors"]:
         user_choice = input("Invalid choice. Please enter rock, paper, or scissors: ").lower()
     return user_choice
 
 def get_computer_choice():
-    """
-    Function to randomly generate the computer's choice of rock, paper, or scissors.
-    """
+    
+    # Function to randomly generate the computer's choice of rock, paper, or scissors.
+
     computer_choice = random.choice(["rock", "paper", "scissors"])
     return computer_choice
 
 def determine_winner(user_choice, computer_choice):
-    """
-    Function to determine the winner of the game based on the user's and computer's choices.
-    """
+    
+    # Function to determine the winner of the game based on the user's and computer's choices.
+    
     if user_choice == computer_choice:
         return "It's a tie!"
     elif (user_choice == "rock" and computer_choice == "scissors") or \
@@ -31,9 +31,9 @@ def determine_winner(user_choice, computer_choice):
         return "Computer wins!"
 
 def play_game():
-    """
-    Function to play the rock-paper-scissors game.
-    """
+    
+    # Function to play the rock-paper-scissors game.
+    
     print("Welcome to Rock-Paper-Scissors!")
     while True:
         user_choice = get_user_choice()
@@ -48,4 +48,4 @@ def play_game():
             break
 
 play_game()
-```
+
